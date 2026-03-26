@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — CS4717</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-brand">
+      <div class="logo-placeholder">TF</div>
+      <div>
+        <h1>TaskFlow</h1>
+        <span>Demo Project | CS4717</span>
+      </div>
+    </div>
+    <button class="btn-logout">Logout</button>
+  </header>
+
+
+  <nav class="navbar">
+    <a href="#" class="active">Dashboard</a>
+    <a href="#">Tasks</a>
+    <a href="#">New Task</a>
+  </nav>
+
+
+  <main class="page">
+    <div class="page-title">Phase 1 UI</div>
+    <div class="page-subtitle">TaskFlow dashboard — Section A</div>
+
+    <div class="main-grid">
+
+
+      <section class="card task-list-card">
+        <div class="card-title">
+          My Tasks
+          <span class="task-count-badge" id="task-count">5</span>
+        </div>
+        <div class="card-subtitle">Manage and track your tasks below.</div>
+        <div class="task-list" id="task-list">
+     
+        </div>
+      </section>
+
+
+      <section class="card form-card">
+        <div class="card-title">Create Task</div>
+        <div class="card-subtitle">Fill in the fields to add a new task.</div>
+
+        <div class="form-group">
+          <label for="task-title">Title <span style="color:var(--accent)">*</span></label>
+          <input type="text" id="task-title" class="input" placeholder="Enter task title..." />
+          <div class="validation-msg" id="title-error">Task title is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="task-desc">Description</label>
+          <textarea id="task-desc" class="input" placeholder="Short description (optional)..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="task-status">Status</label>
+          <select id="task-status" class="input">
+            <option value="Todo">Todo</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="task-due">Due Date <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+          <input type="date" id="task-due" class="input" />
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-clear" id="btn-clear">Clear</button>
+          <button class="btn btn-primary" id="btn-create">Create Task</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    © 2026 TaskFlow — CS4717 Web Technologies I &nbsp;|&nbsp;
+    <a href="#" style="color:var(--muted)">Privacy</a>
+  </footer>
+
+ 
+  <script src="script.js"></script>
+
+</body>
+</html>
